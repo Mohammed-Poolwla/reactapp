@@ -1,37 +1,45 @@
 {
-  "name": "redux-simple-starter",
-  "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
-  "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "name": "@tinacms/starter",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "dev": "yarn tinacms server:start -c \"next dev\"",
+    "build": "yarn tinacms server:start -c \"next build\"",
+    "start": "yarn tinacms server:start -c \"next start\"",
+    "export": "yarn build && next export"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.2.1",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "chai": "^3.5.0",
-    "chai-jquery": "^2.0.0",
-    "jquery": "^2.2.1",
-    "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
-    "react-addons-test-utils": "^0.14.7",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "@tinacms/cli": "^0.55.1",
+    "@types/js-cookie": "^2.2.6",
+    "@types/node": "^13.13.1",
+    "@types/react": "^16.9.43",
+    "@types/styled-components": "^5.1.3",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "postcss-import": "^14.0.2",
+    "postcss-nesting": "^8.0.1",
+    "tailwindcss": "^2.2.4"
   },
   "dependencies": {
-    "babel-preset-stage-1": "^6.1.18",
-    "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-redux": "4.3.0",
-    "react-router": "^2.0.1",
-    "redux": "^3.0.4"
+    "@headlessui/react": "^1.3.0",
+    "@tailwindcss/typography": "^0.4.1",
+    "@tinacms/auth": "^0.50.0",
+    "date-fns": "^2.23.0",
+    "next": "10.0.5",
+    "next-svgr": "^0.0.2",
+    "next-tinacms-cloudinary": "^3.2.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^4.2.0",
+    "react-is": "^17.0.2",
+    "react-markdown": "^5.0.3",
+    "react-tinacms-editor": "^0.51.6",
+    "styled-components": "^5.1.3",
+    "styled-jsx": "^3.2.5",
+    "tinacms": "^0.55.0",
+    "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "final-form": "4.20.1"
   }
 }
